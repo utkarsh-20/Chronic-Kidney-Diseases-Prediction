@@ -1,0 +1,15 @@
+-> Steps for creating environment for testing the app:
+
+> conda create -n test python=3.6.7 pip
+
+> activate test
+
+> pip install -r requirements.txt
+
+-> To run the app:
+
+-> Move to the directory where app.py file is located in conda prompt while the activated environment is "test".
+
+-> Run 'python app.py' (without quotes)
+
+-> Open 'localhost:5000' in the browser to acess the app.

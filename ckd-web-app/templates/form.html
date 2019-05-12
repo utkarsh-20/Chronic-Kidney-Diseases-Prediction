@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class='container'>
+     <h2>{{ form_title }}</h2>
+</div>
+<div class='container'>
+    <form method="POST" action='/analyse' role='form'>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>Age:</label>
+                <input type="number" name="age" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5''>
+                <label>Blood Pressure(Diastolic):</label>
+                <input type="number" name="bp" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>Specific Gravity(one of the 5 values: 1.005,1.010,1.015,1.020,1.025):</label>
+                <input type="number" step="any" name="sg" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>Albumin(one of the 6 values:0,1,2,3,4,5):</label>
+                <input type="number" name="al" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>Sugar(one of the 6 values:0,1,2,3,4,5):</label>
+                <input type="number" name="su" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>Red Blood Cells(normal/abnormal):</label>
+                <input type="text" name="rbc" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>Pus Cell(normal/abnormal):</label>
+                <input type="text" name="pc" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>Pus Cell Clumps(present/notpresent):</label>
+                <input type="text" name="pcc" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>Bacteria(present/notpresent):</label>
+                <input type="text" name="ba" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>Blood Glucose Random:</label>
+                <input type="number" name="bgr" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>Blood Urea:</label>
+                <input type="number" name="bu" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>Serum Creatinine:</label>
+                <input type="number" step="any" name="sc" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>Sodium:</label>
+                <input type="number" name="sod" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>Potassium:</label>
+                <input type="number" step="any" name="pot" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>Haemoglobin:</label>
+                <input type="number" step="any" name="hemo" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>Packed  Cell Volume:</label>
+                <input type="number" name="pcv" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>White Blood Cell Count:</label>
+                <input type="number" name="wc" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>Red Blood Cell Count:</label>
+                <input type="number" step="any" name="rc" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>Hypertension(yes/no):</label>
+                <input type="text" name="htn" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>Diabetes Mellitus(yes/no):</label>
+                <input type="text" name="dm" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>Coronary Artery Disease(yes,no):</label>
+                <input type="text" name="cad" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>Appetite(good,poor):</label>
+                <input type="text" name="appet" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>Pedal Edema(yes,no):</label>
+                <input type="text" name="pe" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+                <label>Anemia(yes,no):</label>
+                <input type="text" name="ane" class='form-control'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group col-xs-5 col-lg-5'>
+            <input type="submit" name="submit" value="Predict" class= 'btn btn-default'>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}
